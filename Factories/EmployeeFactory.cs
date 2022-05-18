@@ -4,13 +4,22 @@ namespace StrategyPattern.Factories
 {
     public class EmployeeFactory
     {
+        public static Employee Create(string fullName, double salary)
+        {
+            return new Employee
+            {
+                FullName = fullName,
+                Salary = salary
+            };
+        }
+
         public static Employee Create(string fullName, double salary, Classify classify)
         {
             return new Employee
             {
                 FullName = fullName,
                 Salary = salary,
-                Classify = classify,
+                Classify = classify
             };
         }
 
