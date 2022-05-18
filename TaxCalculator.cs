@@ -24,7 +24,7 @@ namespace StrategyPattern
     public partial class TaxCalculator
     {
         // Using recursive pattern - C# 8.0
-        public double CalculateRecursivePattern(Employee employee) => employee switch
+        public double CalculateByRecursivePattern(Employee employee) => employee switch
         {
             var (classify) when classify == Classify.Intern => 0,
             var (classify, nationality) when classify == Classify.Official && nationality == Nationality.VN => employee.Salary * 0.1,
@@ -33,7 +33,7 @@ namespace StrategyPattern
         };
 
         // Using Property patterns - C# 8.0
-        public double CalculatePropertyPattern(Employee employee) => employee switch
+        public double CalculateByPropertyPattern(Employee employee) => employee switch
         {
             { Classify: Classify.Intern } => 0,
             { Classify: Classify.Official, Nationality: Nationality.VN } => employee.Salary * 0.1,
@@ -42,7 +42,7 @@ namespace StrategyPattern
         };
 
         // Functional programming approach
-        public double CalculateFP(Employee employee) => new (Func<Classify, Nationality, bool?> condition, Func<double, double> calculator)[]
+        public double CalculateByFP(Employee employee) => new (Func<Classify, Nationality, bool?> condition, Func<double, double> calculator)[]
         {
             ((classify, _) => classify == Classify.Intern, salary => 0),
             ((classify, nationality) => classify == Classify.Official && nationality == Nationality.VN, salary => salary * 0.1),
