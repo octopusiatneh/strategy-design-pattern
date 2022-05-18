@@ -15,9 +15,9 @@ namespace StrategyPattern
             return this;
         }
 
-        public double CalculateStrategyPattern(Employee employee)
+        public double CalculateByStrategyPattern(Employee employee)
         {
-            return _strategy.CalculateStrategyPattern(employee);
+            return _strategy.CalculateByStrategyPattern(employee);
         }
     }
 

@@ -4,17 +4,17 @@ namespace StrategyPattern.Strategies
 {
     public interface ITaxCalculatorStrategy
     {
-        public double CalculateStrategyPattern(Employee employee);
+        public double CalculateByStrategyPattern(Employee employee);
     }
 
     public class InternEmployeeTaxCalculator : ITaxCalculatorStrategy
     {
-        public double CalculateStrategyPattern(Employee employee) => 0;
+        public double CalculateByStrategyPattern(Employee employee) => 0;
     }
 
     public class OfficalEmployeeTaxCalculator : ITaxCalculatorStrategy
     {
-        public double CalculateStrategyPattern(Employee employee) => employee switch
+        public double CalculateByStrategyPattern(Employee employee) => employee switch
         {
             { Classify: Classify.Official, Nationality: Nationality.VN } => CalculateTaxForAsianEmployee(employee.Salary),
             { Classify: Classify.Official, Nationality: Nationality.US } => CalculateTaxForAmericaEmployee(employee.Salary),

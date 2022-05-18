@@ -23,7 +23,7 @@ namespace StrategyPattern.Models
 
         public void Deconstruct(out string fullName, out double salary, out double tax)
         {
-            (fullName, salary, tax) = (FullName, Salary, _taxCalculator.CalculateFP(this));
+            (fullName, salary, tax) = (FullName, Salary, _taxCalculator.CalculateByStrategyPattern(this));
         }
     }
 }
