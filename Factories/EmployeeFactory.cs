@@ -22,16 +22,5 @@ namespace StrategyPattern.Factories
                 Classify = classify
             };
         }
-
-        public static Employee Create(string fullName, double salary, Classify classify, Nationality nationality)
-        {
-            return new Employee
-            {
-                FullName = fullName,
-                Salary = salary,
-                Classify = classify,
-                Nationality = nationality
-            };
-        }
     }
 }

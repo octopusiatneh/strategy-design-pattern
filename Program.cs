@@ -22,11 +22,9 @@ namespace StrategyPattern
         {
             var employees = new[]
             {
-                EmployeeFactory.Create(fullName: "Tran Van A", salary: 500, Classify.Intern),
+                EmployeeFactory.Create(fullName: "Tran Van A", salary: 500, Classify.Official),
                 EmployeeFactory.Create(fullName: "Nguyen Thi B", salary: 1_000, Classify.Official),
-                EmployeeFactory.Create(fullName: "Johnny Depp", salary: 20_000, Classify.Official, Nationality.US),
-                EmployeeFactory.Create(fullName: "Lord Voldemort", salary: 30_000, Classify.Official, Nationality.UK),
-                EmployeeFactory.Create(fullName: "Baolô", salary: 40_000, Classify.Official, Nationality.MEX),
+                EmployeeFactory.Create(fullName: "Tran Van C", salary: 200, Classify.Intern)
             };
 
             Array.ForEach(employees, PrintEmployeeInformation);
