@@ -26,7 +26,7 @@ namespace StrategyPattern
         // Using recursive pattern - C# 8.0
         public double CalculateByRecursivePattern(Employee employee) => employee switch
         {
-            var (classify) when classify == Classify.Intern => 0,
+            var (classify, _) when classify == Classify.Intern => 0,
             var (classify, nationality) when classify == Classify.Official && nationality == Nationality.VN => employee.Salary * 0.1,
             var (classify, nationality) when classify == Classify.Official && nationality == Nationality.US => employee.Salary * 0.2,
             _ => 0

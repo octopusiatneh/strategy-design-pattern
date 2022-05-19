@@ -11,11 +11,6 @@ namespace StrategyPattern.Models
         public Classify Classify { get; set; }
         public Nationality Nationality { get; set; }
 
-        public void Deconstruct(out Classify classify)
-        {
-            classify = Classify;
-        }
-
         public void Deconstruct(out Classify classify, out Nationality nationality)
         {
             (classify, nationality) = (Classify, Nationality);

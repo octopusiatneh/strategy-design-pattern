@@ -14,6 +14,8 @@ namespace StrategyPattern.Models
     {
         VN,
         US,
-        UK
+        MEX,
+        UK,
+        FR
     }
 }

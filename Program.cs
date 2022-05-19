@@ -26,6 +26,7 @@ namespace StrategyPattern
                 EmployeeFactory.Create(fullName: "Nguyen Thi B", salary: 1_000, Classify.Official),
                 EmployeeFactory.Create(fullName: "Johnny Depp", salary: 20_000, Classify.Official, Nationality.US),
                 EmployeeFactory.Create(fullName: "Lord Voldemort", salary: 30_000, Classify.Official, Nationality.UK),
+                EmployeeFactory.Create(fullName: "Baolô", salary: 40_000, Classify.Official, Nationality.MEX),
             };
 
             Array.ForEach(employees, PrintEmployeeInformation);
